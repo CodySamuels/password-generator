@@ -6,12 +6,14 @@ var specialChar = ['!', '@', '#', '$', '%', '^', '&', '*'];
 var numericChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var lowercaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var desiredChars = [];
+
 
 
 // Create generatePassword (a fucntion)
 function generatePassword() {
   var finalPassword = '';
+  var desiredChars = [];
+
   // Prompt the User for password legnth, and store the password length in a variable.
   var passwordLength = prompt("How long do you want your password to be? Password must be 8-128 characters.");
   if (passwordLength >= 8 && passwordLength <= 128) {
@@ -43,9 +45,9 @@ function generatePassword() {
   };
   console.log(desiredChars);
 
-  // This generates one character of the password. This needs loops a number of times equal to passwordLength.
+  // This generates one character of the password. This loops a number of times equal to passwordLength.
   for (let i = 0; i < passwordLength; i++) {
-    var passwordStr = desiredChars[Math.floor(Math.random() * desiredChars.length + 1)];
+    var passwordStr = desiredChars[Math.floor(Math.random() * desiredChars.length)];
     var finalPassword = finalPassword.concat(passwordStr);
   }
   console.log(finalPassword);
@@ -63,6 +65,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-// Splitting an array is the way to go for combining the elements.
