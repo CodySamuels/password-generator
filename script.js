@@ -1,17 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
-// Need arrays for Special Characters, Numeric Characters, Lowercase Characters, and Uppercase Characters
-
 // var specialChars = "!@#$%^&*"(".split("")
 var specialChar = ['!','@','#','$','%','^','&','*'];
 var numericChar = ['1','2','3','4','5','6','7','8','9','0'];
 var lowercaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var desiredChars =[];
-
-
+var finalPassword =[];
 
 // Create generatePassword (a fucntion)
 
@@ -46,13 +42,12 @@ if (includeNumericPassword===true) {
 };
 console.log(desiredChars);
 
-// This generates one character of the password. This needs to loop *passwordLength
-var passwordStr = desiredChars[Math.floor(Math.random() * desiredChars.length +1)];
-console.log("======");
-console.log(passwordStr);
-
-
-
+// This generates one character of the password. This needs loops a number of times equal to passwordLength.
+for (let i = 0; i < passwordLength; i++) {
+  var passwordStr = desiredChars[Math.floor(Math.random() * desiredChars.length +1)];
+  var finalPassword = finalPassword.concat(passwordStr);
+}
+console.log(finalPassword);
 
 
 
