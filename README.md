@@ -4,11 +4,16 @@ This is a very basic password generator. There was some provided code that basic
 
 The top of the code has my arrays of global variables. There's an array for each character set.
 
-
 function generatePassword is the main code that I was required to write for the project. Inside the function we have some local variables
 variables 'finalPassword' and 'desiredChars' starts empty, but will be filled by the user's input.
 
 The first prompt asks if how long of a password they want generated. This is stored in an integer. There's a while loop to ensure that the user stays within the parameters of the assignment (8 to 128 characters).
+
+https://codysamuels.github.io/password-generator/ss2.png
+Shows the initial prompt.
+https://codysamuels.github.io/password-generator/ss3.png
+Shows the prompt when the user fails to enter a number between 8-128.
+
 
 The next prompt asks if the user wants to use lowercase letters in their final password. This sets a boolean that if true concats the lowercase array into the desiredChars array. This is done for each of the character sets.
 
@@ -18,6 +23,7 @@ The next set of code is a loop that generates the final password. The loop runs 
 
 Finally, finalPassword is displayed in the text of the html's card.
 
+https://codysamuels.github.io/password-generator/SS1.png
 
 
 ## User Story
