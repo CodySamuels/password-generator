@@ -10,8 +10,11 @@ variables 'finalPassword' and 'desiredChars' starts empty, but will be filled by
 The first prompt asks if how long of a password they want generated. This is stored in an integer. There's a while loop to ensure that the user stays within the parameters of the assignment (8 to 128 characters).
 
 https://codysamuels.github.io/password-generator/ss2.png
+
 Shows the initial prompt.
+
 https://codysamuels.github.io/password-generator/ss3.png
+
 Shows the prompt when the user fails to enter a number between 8-128.
 
 
